@@ -1,0 +1,26 @@
+var TEXT_GAMEOVER   = "GAME OVER";
+var TEXT_CONGRATS   = "CONGRATULATIONS!!";
+var TEXT_WIN        = "YOU WIN!!!";
+var TEXT_PLAY       = "PLAY";
+var TEXT_EXIT       = "EXIT";
+var TEXT_SCORE      = "SCORE";
+var TEXT_BEST_SCORE = "BEST";
+var TEXT_LEVEL      = "LEVEL";
+var TEXT_LIVES      = "LIVES";
+var TEXT_COMPLETED  = "COMPLETED";
+var TEXT_PERFECT    = "PERFECT!!";
+var TEXT_GREAT      = "GREAT!";
+var TEXT_GOOD       = "GOOD";
+var TEXT_BAD        = "TOO BAD!!";
+var TEXT_MULTIPLIER = "YOUR MULTIPLIER IS";
+var TEXT_HELP1      = "DROP THE BLOCKS IN THE CENTER OF THE SCREEN TO GET BEST SCORE MULTIPLIER!!";
+var TEXT_HELP2      = "STACK BLOCKS PERFECTLY TO GET AN EXTRA BONUS!";
+var TEXT_CREDITS_DEVELOPED = "DEVELOPED BY";
+var TEXT_PRELOADER_CONTINUE = "START";
+
+var TEXT_SHARE_IMAGE = "200x200.jpg";
+var TEXT_SHARE_TITLE = "Congratulations!";
+var TEXT_SHARE_MSG1 = "You collected <strong>";
+var TEXT_SHARE_MSG2 = " points</strong>!<br><br>Share your score with your friends!";
+var TEXT_SHARE_SHARE1 = "My score is ";
+var TEXT_SHARE_SHARE2 = " points! Can you do better?";

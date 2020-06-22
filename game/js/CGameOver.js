@@ -1,0 +1,98 @@
+function CGameOver(iX,iY){
+    var _oMsgText;
+    var _oMsgTextStroke;
+    var _oScoreText;
+    var _oScoreTextStroke;
+    var _oButPlayAgain;
+    var _oButBackHome;
+    var _oContainer;
+    
+    this._init = function(iX,iY){
+        _oContainer = new createjs.Container();
+        _oContainer.alpha = 0;
+        _oContainer.x = iX;
+        _oContainer.y = iY;
+        s_oStage.addChild(_oContainer);
+
+	var oSpriteBg = s_oSpriteLibrary.getSprite('msg_box');
+        var oBg = createBitmap(oSpriteBg);
+        _oContainer.addChild(oBg);
+
+        var iWidth = 500;
+        var iHeight = 90;
+        var iTextX = CANVAS_WIDTH / 2;
+        var iTextY = 820;
+        _oMsgTextStroke = new CTLText(_oContainer, 
+                    iTextX -iWidth/2, iTextY - iHeight/2, iWidth, iHeight, 
+                    80, "center", "#403e39", FONT_GAME, 1,
+                    2, 2,
+                    TEXT_GAMEOVER,
+                    true, true, true,
+                    false );
+        _oMsgTextStroke.setOutline(4);            
+
+        _oMsgText = new CTLText(_oContainer, 
+                    iTextX -iWidth/2, iTextY - iHeight/2, iWidth, iHeight, 
+                    80, "center", "#ffff21", FONT_GAME, 1,
+                    2, 2,
+                    TEXT_GAMEOVER,
+                    true, true, true,
+                    false );
+
+        var iWidth = 500;
+        var iHeight = 250;
+        var iTextX = CANVAS_WIDTH / 2;
+        var iTextY = 1020;
+        _oScoreTextStroke = new CTLText(_oContainer, 
+                    iTextX -iWidth/2, iTextY - iHeight/2, iWidth, iHeight, 
+                    100, "center", "#403e39", FONT_GAME, 1,
+                    2, 2,
+                    TEXT_SCORE +":\n0",
+                    true, true, true,
+                    false );
+        _oScoreTextStroke.setOutline(4);            
+
+        _oScoreText = new CTLText(_oContainer, 
+                    iTextX -iWidth/2, iTextY - iHeight/2, iWidth, iHeight, 
+                    100, "center", "#ffff21", FONT_GAME, 1,
+                    2, 2,
+                    TEXT_SCORE +":\n0",
+                    true, true, true,
+                    false );
+       
+       
+	_oButPlayAgain = new CGfxButton(860,1340,s_oSpriteLibrary.getSprite('but_play_again'),_oContainer);
+        _oButPlayAgain.addEventListener(ON_MOUSE_UP, this.onButPlayAgainRelease, this);
+		
+	_oButBackHome = new CGfxButton(540,1340,s_oSpriteLibrary.getSprite('but_back_home'),_oContainer);
+        _oButBackHome.addEventListener(ON_MOUSE_UP, this._onButBackHomeRelease, this);
+        
+    };
+    
+    this.show = function(iScore){
+        _oScoreText.refreshText( TEXT_SCORE +":\n"+iScore );
+        _oScoreTextStroke.refreshText(  TEXT_SCORE +":\n"+iScore );
+        
+	createjs.Tween.get(_oContainer).to({alpha:1}, 500);
+        
+        setVolume("soundtrack",1);
+        
+        $(s_oMain).trigger("save_score",iScore);
+    };
+    
+    this._onButBackHomeRelease = function(){
+        s_oGame.onExit();
+    };
+	
+    this.onButPlayAgainRelease = function(){
+        _oContainer.alpha = 0;
+        s_oGame.unload();
+        s_oMain.gotoGame();
+    };
+    
+    this.isVisible = function(){
+        return _oContainer.alpha===0?false:true;
+    };
+	
+    this._init(iX,iY);
+}
