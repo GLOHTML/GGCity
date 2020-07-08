@@ -166,6 +166,10 @@ function CInputPanel(iX,iY){
         var phoneVal = phoneInputElement.value;
         var emailVal = emailInputElement.value;
         var scoreVal = _oScore;
+        if(nameVal == "" || phoneVal == "" || emailVal == ""){
+            alert("Isi data");
+            return false;
+        }
 
         nameInputElement.value = "";
         phoneInputElement.value = "";
@@ -173,6 +177,7 @@ function CInputPanel(iX,iY){
         doRecordVisit();
         saveData(nameVal,scoreVal,phoneVal,emailVal);
         this.inputVisibility(false);
+        return true;
 
         // console.log("Name : " + nameVal);
         // console.log("Phone : " + phoneVal);
@@ -180,15 +185,15 @@ function CInputPanel(iX,iY){
     }
     
     this._onButBackHomeRelease = function(){
-        this.inputGetValue();
-        s_oGame.onExit();
+        if(this.inputGetValue()) s_oGame.onExit();
     };
 	
     this.onButPlayAgainRelease = function(){
-        this.inputGetValue();
-        _oContainer.alpha = 0;
-        s_oGame.unload();
-        s_oMain.gotoGame();
+        if(this.inputGetValue()){
+            _oContainer.alpha = 0;
+            s_oGame.unload();
+            s_oMain.gotoGame();
+        }
     };
     
     this.isVisible = function(){
