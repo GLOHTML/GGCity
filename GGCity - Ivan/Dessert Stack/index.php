@@ -77,7 +77,7 @@
                                     start_hook_rot_speed:0.1, //HOOK ROTATION SPEED FOR THE FIRST LEVEL
                                     hook_rot_increase:0.03,   // AMOUNT TO ADD TO HOOK ROTATION SPEED AFTER EACH LEVEL
                                     hook_max_rot:1,           //MAX HOOK ROTATION ANGLE
-                                    num_lives:1,              //NUMBER OF LIVES
+                                    num_lives:5,              //NUMBER OF LIVES
                                     best_mult:2,              //HIGHEST MULTIPLIER 
                                     bonus_mult:2,             //MULTIPLIER FOR BONUS 
                                     block_fall_speed:2,        //INCREASE THIS VALUE TO LET THE BLOCK FALL FASTER
