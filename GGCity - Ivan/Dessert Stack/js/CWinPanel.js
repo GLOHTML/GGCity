@@ -25,7 +25,7 @@ function CWinPanel(iX,iY){
         var iTextY = 820;
         _oMsgTextStroke = new CTLText(_oContainer, 
                     iTextX -iWidth/2, iTextY - iHeight/2, iWidth, iHeight, 
-                    80, "center", "#403e39", FONT_GAME, 1,
+                    80, "center", "#9E1F62", FONT_GAME, 1,
                     2, 2,
                     TEXT_WIN,
                     true, true, true,
@@ -34,7 +34,7 @@ function CWinPanel(iX,iY){
 
         _oMsgText = new CTLText(_oContainer, 
                     iTextX -iWidth/2, iTextY - iHeight/2, iWidth, iHeight, 
-                    80, "center", "#ffff21", FONT_GAME, 1,
+                    80, "center", "#EE327B", FONT_GAME, 1,
                     2, 2,
                     TEXT_WIN,
                     true, true, true,
@@ -46,7 +46,7 @@ function CWinPanel(iX,iY){
         var iTextY = 1020;
         _oScoreTextStroke = new CTLText(_oContainer, 
                     iTextX -iWidth/2, iTextY - iHeight/2, iWidth, iHeight, 
-                    100, "center", "#403e39", FONT_GAME, 1,
+                    100, "center", "#9E1F62", FONT_GAME, 1,
                     2, 2,
                     TEXT_SCORE +":\n0",
                     true, true, true,
@@ -55,7 +55,7 @@ function CWinPanel(iX,iY){
 
         _oScoreText = new CTLText(_oContainer, 
                     iTextX -iWidth/2, iTextY - iHeight/2, iWidth, iHeight, 
-                    100, "center", "#ffff21", FONT_GAME, 1,
+                    100, "center", "#EE327B", FONT_GAME, 1,
                     2, 2,
                     TEXT_SCORE +":\n0",
                     true, true, true,

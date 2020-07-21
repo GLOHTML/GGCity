@@ -30,7 +30,7 @@ function CInterface(){
         var oScoreBg = createBitmap(s_oSpriteLibrary.getSprite('information_panel'));
         _oScoreContainer.addChild(oScoreBg);
         
-        _oNumScoreStroke = new createjs.Text("0","50px "+FONT_GAME, "#403e39");
+        _oNumScoreStroke = new createjs.Text("0","50px "+FONT_GAME, "#9E1F62");
         _oNumScoreStroke.x = 80;
         _oNumScoreStroke.y = 50;
         _oNumScoreStroke.outline = 4;
@@ -38,14 +38,14 @@ function CInterface(){
 	_oNumScoreStroke.textBaseline  = "alphabetic";
         _oScoreContainer.addChild(_oNumScoreStroke);
         
-        _oNumScore = new createjs.Text("0","50px "+FONT_GAME, "#ffff21");
+        _oNumScore = new createjs.Text("0","50px "+FONT_GAME, "#EE327B");
         _oNumScore.x = 80;
         _oNumScore.y = 50;
         _oNumScore.textAlign = "left";
 	_oNumScore.textBaseline  = "alphabetic";
         _oScoreContainer.addChild(_oNumScore);
         
-        _oLivesTextStroke = new createjs.Text("" ,"50px "+FONT_GAME, "#403e39");
+        _oLivesTextStroke = new createjs.Text("" ,"50px "+FONT_GAME, "#9E1F62");
         _oLivesTextStroke.x = 80;
         _oLivesTextStroke.y = 110;
         _oLivesTextStroke.outline = 4;
@@ -53,7 +53,7 @@ function CInterface(){
 	_oLivesTextStroke.textBaseline  = "alphabetic";
         _oScoreContainer.addChild(_oLivesTextStroke);
         
-        _oLivesText = new createjs.Text("" ,"50px "+FONT_GAME, "#ffff21");
+        _oLivesText = new createjs.Text("" ,"50px "+FONT_GAME, "#EE327B");
         _oLivesText.x = 80;
         _oLivesText.y = 110;
         _oLivesText.textAlign = "left";
@@ -191,7 +191,7 @@ function CInterface(){
             s_oGame.tweenTrajectory(1,10);
         }
         
-        var oMultiplierTextStroke = new createjs.Text(szEncouragment+"\nX "+iLevelMultiplier,"80px "+FONT_GAME, "#403e39");
+        var oMultiplierTextStroke = new createjs.Text(szEncouragment+"\nX "+iLevelMultiplier,"80px "+FONT_GAME, "#9E1F62");
         oMultiplierTextStroke.lineHeight = 90;
         oMultiplierTextStroke.x = CANVAS_WIDTH/2;
         oMultiplierTextStroke.y = -100;
@@ -200,7 +200,7 @@ function CInterface(){
         oMultiplierTextStroke.outline = 8;
         s_oStage.addChild(oMultiplierTextStroke);
         
-        var oMultiplierText = new createjs.Text(szEncouragment+"\nX "+iLevelMultiplier,"80px "+FONT_GAME, "#ffff21");
+        var oMultiplierText = new createjs.Text(szEncouragment+"\nX "+iLevelMultiplier,"80px "+FONT_GAME, "#EE327B");
         oMultiplierText.lineHeight = 90;
         oMultiplierText.x = CANVAS_WIDTH/2;
         oMultiplierText.y = -100;

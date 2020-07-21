@@ -13,6 +13,10 @@ function CSplashScreen() {
     this._init = function () {
 
         _oContainer = new createjs.Container();
+
+        var oGraphics = new createjs.Graphics().beginFill("#ffffff").drawRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+        var oShape = new createjs.Shape(oGraphics);
+        _oContainer.addChild(oShape);
         s_oStage.addChild(_oContainer);
 
         _oLogoGLO = s_oSpriteLibrary.getSprite('logo_glo');

@@ -68,14 +68,14 @@ function CBlock(iX,iY,oSprite,iWidth,iHeight,oParentContainer){
         var szColor;
         var szColorStroke;
         if(iLevel === 1){
-            szColor = "#fffc6b";
-            szColorStroke = "#0a2f77";
+            szColor = "#EE327B";
+            szColorStroke = "#9E1F62";
         }else if(iLevel === 2){
-            szColor = "#56cc56";
-            szColorStroke = "#fff";
+            szColor = "#EE327B";
+            szColorStroke = "#9E1F62";
         }else{
-            szColor = "#fff";
-            szColorStroke = "#0a2f77";
+            szColor = "#EE327B";
+            szColorStroke = "#9E1F62";
         }
         
         var oScoreStrokeText = new createjs.Text("+"+iScore,"50px "+FONT_GAME, szColorStroke);

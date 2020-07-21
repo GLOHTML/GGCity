@@ -40,7 +40,7 @@ function CHelpPanel(oParentContainer){
         var iTextY = 420;
         _oTextStroke1 = new CTLText(_oContainer, 
                     iTextX -iWidth/2, iTextY - iHeight/2, iWidth, iHeight, 
-                    60, "center", "#403e39", FONT_GAME, 0.8,
+                    60, "center", "#9E1F62", FONT_GAME, 0.8,
                     2, 2,
                     TEXT_HELP1,
                     true, true, true,
@@ -49,7 +49,7 @@ function CHelpPanel(oParentContainer){
 
         _oText1 = new CTLText(_oContainer, 
                     iTextX -iWidth/2, iTextY - iHeight/2, iWidth, iHeight, 
-                    60, "center", "#ffff21", FONT_GAME, 0.8,
+                    60, "center", "#EE327B", FONT_GAME, 0.8,
                     2, 2,
                     TEXT_HELP1,
                     true, true, true,
@@ -61,7 +61,7 @@ function CHelpPanel(oParentContainer){
         var iTextY = 1320;
         _oTextStroke2 = new CTLText(_oContainer, 
                     iTextX -iWidth/2, iTextY - iHeight/2, iWidth, iHeight, 
-                    60, "center", "#403e39", FONT_GAME, 0.8,
+                    60, "center", "#9E1F62", FONT_GAME, 0.8,
                     2, 2,
                     TEXT_HELP2,
                     true, true, true,
@@ -70,7 +70,7 @@ function CHelpPanel(oParentContainer){
 
         _oText2 = new CTLText(_oContainer, 
                     iTextX -iWidth/2, iTextY - iHeight/2, iWidth, iHeight, 
-                    60, "center", "#ffff21", FONT_GAME, 0.8,
+                    60, "center", "#EE327B", FONT_GAME, 0.8,
                     2, 2,
                     TEXT_HELP2,
                     true, true, true,

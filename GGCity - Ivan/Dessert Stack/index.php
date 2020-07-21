@@ -11,7 +11,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>CITY BLOCK</title>
+        <title>DESSERT STACK</title>
 
         <script type="text/javascript" src="recordvisit.js"></script>
 
@@ -69,9 +69,9 @@
                 }
                      var oMain = new CMain({
                                     levels:[
-                                                3,           //NUM BLOCK FOR LEVEL 1 12
-                                                2,           //NUM BLOCK FOR LEVEL 2 18
-                                                2            //NUM BLOCK FOR LEVEL 3 26
+                                                6,           //NUM BLOCK FOR LEVEL 1 12
+                                                12,           //NUM BLOCK FOR LEVEL 2 18
+                                                20            //NUM BLOCK FOR LEVEL 3 20
                                                //....ADD HERE NUM OF BLOCKS IF YOU WANT MORE LEVELS (EG: [12,18,26,30])
                                             ],
                                     start_hook_rot_speed:0.1, //HOOK ROTATION SPEED FOR THE FIRST LEVEL

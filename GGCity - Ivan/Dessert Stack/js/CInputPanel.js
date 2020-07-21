@@ -42,7 +42,7 @@ function CInputPanel(iX,iY){
         var iTextY = 820;
         _oMsgTextStroke = new CTLText(_oContainer, 
                     iTextX -iWidth/2, iTextY - iHeight/2, iWidth, iHeight, 
-                    80, "center", "#403e39", FONT_GAME, 1,
+                    80, "center", "#9E1F62", FONT_GAME, 1,
                     2, 2,
                     TEXT_GAMEOVER,
                     true, true, true,
@@ -51,7 +51,7 @@ function CInputPanel(iX,iY){
 
         _oMsgText = new CTLText(_oContainer, 
                     iTextX -iWidth/2, iTextY - iHeight/2, iWidth, iHeight, 
-                    80, "center", "#ffff21", FONT_GAME, 1,
+                    80, "center", "#EE327B", FONT_GAME, 1,
                     2, 2,
                     TEXT_GAMEOVER,
                     true, true, true,
@@ -65,7 +65,7 @@ function CInputPanel(iX,iY){
     // Name Label
     _oNameTextStroke = new CTLText(_oContainer, 
                 CANVAS_WIDTH / 2 -oSpriteBg.width*8/10, CANVAS_HEIGHT*45.5/100, iWidth, iHeight, 
-                40, "center", "#403e39", FONT_GAME, 1.1,
+                40, "center", "#9E1F62", FONT_GAME, 1.1,
                 36, 0,
                 "",
                 true, true, false,
@@ -75,7 +75,7 @@ function CInputPanel(iX,iY){
 
     _oNameText = new CTLText(_oContainer, 
                 CANVAS_WIDTH / 2 -oSpriteBg.width*8/10, CANVAS_HEIGHT*45.5/100, oSpriteBg.width, 70, 
-                40, "center", "#ffff21", FONT_GAME, 1.1,
+                40, "center", "#EE327B", FONT_GAME, 1.1,
                 50, 0,
                 "",
                 true, true, false,
@@ -83,7 +83,7 @@ function CInputPanel(iX,iY){
     // Phone Label
     _oPhoneTextStroke = new CTLText(_oContainer, 
                 CANVAS_WIDTH / 2 -oSpriteBg.width*8/10, CANVAS_HEIGHT*50.5/100, oSpriteBg.width, 70, 
-                40, "center", "#403e39", FONT_GAME, 1.1,
+                40, "center", "#9E1F62", FONT_GAME, 1.1,
                 0, 0,
                 "",
                 true, true, false,
@@ -93,7 +93,7 @@ function CInputPanel(iX,iY){
 
     _oPhoneText = new CTLText(_oContainer, 
                 CANVAS_WIDTH / 2 -oSpriteBg.width*8/10, CANVAS_HEIGHT*50.5/100, oSpriteBg.width, 70, 
-                40, "center", "#ffff21", FONT_GAME, 1.1,
+                40, "center", "#EE327B", FONT_GAME, 1.1,
                 0, 0,
                 "",
                 true, true, false,
@@ -101,7 +101,7 @@ function CInputPanel(iX,iY){
     // Email Label
     _oEmailTextStroke = new CTLText(_oContainer, 
                 CANVAS_WIDTH / 2 -oSpriteBg.width*8/10, CANVAS_HEIGHT*56/100, oSpriteBg.width, 70, 
-                40, "center", "#403e39", FONT_GAME, 1.1,
+                40, "center", "#9E1F62", FONT_GAME, 1.1,
                 0, 0,
                 "",
                 true, true, false,
@@ -111,7 +111,7 @@ function CInputPanel(iX,iY){
 
     _oEmailText = new CTLText(_oContainer, 
                 CANVAS_WIDTH / 2 -oSpriteBg.width*8/10, CANVAS_HEIGHT*56/100, oSpriteBg.width, 70, 
-                40, "center", "#ffff21", FONT_GAME, 1.1,
+                40, "center", "#EE327B", FONT_GAME, 1.1,
                 0, 0,
                 "",
                 true, true, false,
@@ -167,7 +167,7 @@ function CInputPanel(iX,iY){
         var emailVal = emailInputElement.value;
         var scoreVal = _oScore;
         if(nameVal == "" || phoneVal == "" || emailVal == ""){
-            alert("Isi data");
+            // alert("Isi data");
             return false;
         }
 
