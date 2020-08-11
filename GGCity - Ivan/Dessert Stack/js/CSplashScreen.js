@@ -21,15 +21,15 @@ function CSplashScreen() {
 
         _oLogoGLO = s_oSpriteLibrary.getSprite('logo_glo');
         _oPanel = createBitmap(_oLogoGLO);
-        _oPanel.regX = -430;
-        _oPanel.regY = -520;
+        _oPanel.regX = -200;
+        _oPanel.regY = -500;
         _oPanel.visible = false;
         _oContainer.addChild(_oPanel);
 
         _oLogoGLOG = s_oSpriteLibrary.getSprite('logo_glogames');
         _oPanel2 = createBitmap(_oLogoGLOG);
-        _oPanel2.regX = -430;
-        _oPanel2.regY = -520;
+        _oPanel2.regX = -200;
+        _oPanel2.regY = -500;
         _oPanel2.visible = false;
         _oContainer.addChild(_oPanel2);
 
