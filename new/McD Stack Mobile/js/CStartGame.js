@@ -4,8 +4,8 @@ var maxIntervalInput = 6.5;
 var minIntervalInput = 5.25;
 var maxTopInput = 46;
 var minTopInput = 45; 
-var maxWidthInput = 315; 
-var minWidthInput = 200;
+var maxWidthInput = 30; 
+var minWidthInput = 40;
 var maxLeftInput = 43;
 var minLeftInput = 35;
 var maxWindowStable = 630;
@@ -48,13 +48,13 @@ function resizeForm(){
     $('#phoneInput').css("left", newLeft+"%");
     $('#emailInput').css("left", newLeft+"%");
 
-    if(w > 630){
-        var x = (1-(w/1530)) * (maxWidthInput-minWidthInput);
-        x = maxWidthInput-x;
-        $('#nameInput').css("width", x+"px");
-        $('#phoneInput').css("width", x+"px");
-        $('#emailInput').css("width", x+"px");
-    }
+    var x = (1-(w/1530)) * (maxWidthInput-minWidthInput);
+    x = maxWidthInput-x;
+    $('#nameInput').css("width", x+"%");
+    $('#phoneInput').css("width", x+"%");
+    $('#emailInput').css("width", x+"%");
+
+
 }
 
 $(window).resize(function() {
