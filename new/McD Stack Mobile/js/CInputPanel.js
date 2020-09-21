@@ -131,8 +131,8 @@ function CInputPanel(iX,iY){
         this.inputVisibility(true);
 
 
-        _oMsgText.refreshText("Data");
-        _oMsgTextStroke.refreshText("Data");
+        _oMsgText.refreshText("Game Over");
+        _oMsgTextStroke.refreshText("Game Over");
 
         createjs.Tween.get(_oContainer).to({alpha:1}, 500);
 
