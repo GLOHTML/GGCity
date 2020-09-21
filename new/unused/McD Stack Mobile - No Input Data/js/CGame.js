@@ -129,7 +129,22 @@ function CGame(oData){
         var oSprite = s_oSpriteLibrary.getSprite("perfect_landing");
         var oPerfectLanding = createBitmap(oSprite);
         oPerfectLanding.x  = CANVAS_WIDTH/2;
-        oPerfectLanding.y  = CANVAS_HEIGHT + 140
+        oPerfectLanding.y  = CANVAS_HEIGHT  -15;
+
+        //
+        var newPlatformY;
+        var windowW = $(window).width();
+        var windowH = $(window).height();
+        var scale = windowW/windowH;
+        var change;
+        if(scale < 0.72){
+            change = 1 - ((scale-0.56)/(0.72-0.56));
+            if(change < 0) change = 0;
+            newPlatformY = -15 + (155 * change);
+            oPerfectLanding.y = CANVAS_HEIGHT + newPlatformY;
+        }
+        //
+
         oPerfectLanding.regX = oSprite.width/2
         _oBgContainer.addChild(oPerfectLanding);
 

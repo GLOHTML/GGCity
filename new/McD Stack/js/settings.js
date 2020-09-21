@@ -36,6 +36,18 @@ var STATE_SHOW_THE_TOWER = 4;
 
 var BG_HEIGHT = 2185;
 var FIRST_BLOCK_LANDING_Y = 1735;
+//
+var windowW = $(window).width();
+var windowH = $(window).height();
+var scale = windowW/windowH;
+var change;
+if(scale < 0.72){
+	change = 1 - ((scale-0.56)/(0.72-0.56));
+	if(change < 0) change = 0;
+	FIRST_BLOCK_LANDING_Y = 1735 + (155 * change);
+}
+//
+
 var HOOK_START_X = CANVAS_WIDTH/2;
 var HOOK_START_Y = EDGEBOARD_Y+ 124;
 var START_HOOK_ROT_SPEED;
