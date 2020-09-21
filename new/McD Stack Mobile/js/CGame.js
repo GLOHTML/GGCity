@@ -129,7 +129,7 @@ function CGame(oData){
         var oSprite = s_oSpriteLibrary.getSprite("perfect_landing");
         var oPerfectLanding = createBitmap(oSprite);
         oPerfectLanding.x  = CANVAS_WIDTH/2;
-        oPerfectLanding.y  = CANVAS_HEIGHT + 170
+        oPerfectLanding.y  = CANVAS_HEIGHT + 140
         oPerfectLanding.regX = oSprite.width/2
         _oBgContainer.addChild(oPerfectLanding);
 
