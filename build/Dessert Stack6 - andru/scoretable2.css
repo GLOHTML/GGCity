@@ -1,0 +1,400 @@
+
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	box-sizing: border-box;
+}
+
+body{
+	/* background: #BCB998; */
+	background-color: #F5F5F5;
+	font-family: 'Montserrat', sans-serif;
+	overflow-x: hidden;
+}
+
+.whole_container{
+	display: flex;
+}
+
+.leaderboard_container{
+	width:100%
+}
+
+.ads_top{
+	background-color: #F5F5F5;
+	width: 95%;
+	height: 100%;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+}
+
+.ads_top img{
+	width: auto;
+    max-height: 100px;
+}
+
+.ads_vertical{
+	background-color: #F5F5F5;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	align-self: flex-start;
+	max-width: 20%;
+	display: flex;
+	height: 100vh;
+	padding: 1% 0;
+}
+
+.ads_left{
+	justify-content: end;
+	padding-left: 1%;
+}
+
+.ads_right{
+	justify-content: start;
+	padding-right: 1%;
+}
+
+.ads_vertical img{
+	height: max-content;
+    max-width: 150px;
+	margin: auto;
+}
+
+.lboard_header{
+	background-color: #F5F5F5;
+	display: flex;
+	position: relative;
+	width: 95%;
+	margin: auto;
+	padding: 2% 0;
+}
+
+.scan{
+	text-align: center;
+	font-size: 20px;
+	width: 70%;
+	color: white;
+}
+
+.lboard_title{
+	width: 80%;
+	background: url(gamelogo.png) no-repeat;
+	background-size: contain;
+}
+
+
+.lboard_mem_header{
+	background: #E9393A;
+	width: 95%;
+	margin: auto;
+	height: 55px;
+	border-radius: 20px 20px 0 0;
+}
+
+.mem_header_content{
+	display: flex;
+    height: 100%;
+}
+.header_rank{
+	/*
+	hitung margin ini pake rumus
+	padding left lboard_mem + margin left lboard_mem + margin left no_bar
+	*/
+	margin-left: 2.7%;
+    width: 20%;
+	display: flex;
+	justify-content: center;
+}
+.header_rank::before{
+	content: "Rank";
+	align-self: center;
+	font-weight: bold;
+	color: #fff;
+}
+
+.header_name{
+	display: flex;
+	margin-left: 10%;
+	/*
+	untuk teks point yang mepet bisa hitung width ini pake rumus
+	50% - padding left lboard_mem + margin left lboard_mem + margin left no_bar
+	*/
+    width: 46.3%;
+}
+.header_name::before{
+	margin-left: 5%;
+	content: "Name";
+	align-self: center;
+	font-weight: bold;
+	color: #fff;
+}
+
+.header_points{
+	display: flex;
+    width: 10%;
+}
+.header_points::before{
+	margin-left: 5%;
+	content: "Points";
+	align-self: center;
+	font-weight: bold;
+	color: #fff;
+}
+
+.wrapper{
+	width: 95%;
+	display: flex;
+	margin: auto;
+	padding-bottom:5%;
+}
+
+.lboard_section{
+	width: 100%;
+  height: 95%;
+  background: #fff;
+  padding: 1% 1%;
+  border-radius: 0 0 20px 20px;
+}
+
+.lboard_item{
+	position: relative;
+	counter-reset: section;
+}
+
+.lboard_mem{
+	counter-increment: section;
+	display: flex;
+	align-items: center;
+	padding: 0.2% ;
+	background: white;
+	border-radius: 5px;
+	margin:0.5%;
+	width:99%;
+	box-shadow: 1px 1px 4px 2px #1115;
+}
+
+.lboard_mem .name_bar{
+	width: 50%;
+	margin-left: 10%;
+}
+
+.lboard_mem .name_bar p{
+	color: #3a3d51;
+}
+
+.lboard_mem .name_bar p span{
+	margin-right: 5px;
+}
+
+.lboard_mem .points{
+	width: 10%;
+	color: #3a3d51;
+}
+
+.lboard_mem .name_bar .bar_wrap{
+	width: 100%;
+	height: 5px;
+	background: #d5b000;
+	margin-top: 5px;
+	border-radius: 5px;
+	position: relative;
+	overflow: hidden;
+}
+
+.lboard_mem .name_bar .bar_wrap .inner_bar{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 5px;
+	background: #fff;
+	border-radius: 5px;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+.qr_container {
+	width:128px;
+	height:128px;
+	background: white;
+	border-radius: 10px;
+	box-shadow: 5px 5px 2px #1115;
+}
+.qrcode{
+	padding:10%;
+	width:100%;
+	height:100%;
+}
+
+.lboard_wrap .no_bar{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 1%;
+	width:20%;
+	height:40px;
+}
+.lboard_mem:nth-child(1) .no_bar p,.lboard_mem:nth-child(2) .no_bar p,.lboard_mem:nth-child(3) .no_bar p{
+	display: none;
+}
+
+.lboard_mem:nth-child(1) .no_bar{
+	background-attachment: fixed;
+	background:url(1.png) no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+.lboard_mem:nth-child(2) .no_bar{
+	background: url(2.png) no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+.lboard_mem:nth-child(3) .no_bar{
+	background: url(3.png) no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+
+.lboard_mem .no_bar p::before{
+	content: counter(section) " ";
+}
+
+.lboard_mem .no_bar p span{
+	display:none;
+}
+
+.oval {
+	height: 30px;
+	width: 30px;
+	background-color: #555;
+	border-radius: 50%;
+	padding-top: 5
+}
+
+.sticky {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	z-index:10;
+}
+.zoomEffect{
+	animation-name: zoom;
+	animation-duration: 0.5s;
+	animation-timing-function: ease-out;
+}
+
+.insertEffect{
+	animation-name: insert;
+	animation-duration: 0.5s;
+	animation-timing-function: ease-out;
+}
+@keyframes zoom {
+0% {
+	box-shadow: 0;
+	transform: scale(1);
+	z-index:8;
+}
+50% {
+	box-shadow: 10px 10px 5px grey;
+	transform: scale(1.25);
+}
+100% {
+	box-shadow: 0;
+	transform: scale(1);
+	z-index:5;
+}
+}
+
+@keyframes insert {
+0% {
+	opacity: 0;
+	box-shadow: 10px 10px 5px grey;
+	transform: scale(1.25);
+	z-index:8;
+}
+100% {
+	box-shadow: 0;
+	transform: scale(1);
+	z-index:5;
+}
+}
+
+
+@media (max-width: 768px) {
+	.lboard_qr{
+		padding-right:2%;
+	}
+	.lboard_header {
+		border-radius: 10px;
+	}
+  }
+
+
+
+/*
+UNTUK LOADING AJA
+*/
+.loading-disabled{
+	display:none;
+	}
+
+.loading {
+	position: absolute;
+	z-index: 9999;
+	height: 2em;
+	width: 2em;
+	overflow: visible;
+	margin: auto;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+
+  }
+
+.loading:before {
+	content: '';
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+  }
+
+.loading:not(:required) {
+	font: 0/0 a;
+	color: transparent;
+	text-shadow: none;
+	background-color: transparent;
+	border: 0;
+  }
+
+.loading:not(:required):after {
+	content: '';
+	display: block;
+	font-size: 10px;
+	width: 1em;
+	height: 1em;
+	margin-top: -0.5em;
+	animation: spinner 1500ms infinite linear;
+	border-radius: 0.5em;
+	box-shadow: rgba(0, 0, 0, 0.75) 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) -1.5em 0 0 0, rgba(0, 0, 0, 0.75) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
+  }
+
+  @keyframes spinner {
+	0% {
+	  transform: rotate(0deg);
+	}
+	100% {
+	  transform: rotate(360deg);
+	}
+  }
+
+
+/*
+UNTUK LOADING AJA END
+*/
